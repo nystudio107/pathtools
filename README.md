@@ -1,18 +1,19 @@
-# PathInfo twig plugin for Craft
+# PathTools twig plugin for Craft
 
 This twig plugin for the Craft CMS brings convenient path & url manipulation functions & filters to your Twig templates.
 
 
 ## Installation
 
-To install PathInfo, follow these steps:
+To install PathTools, follow these steps:
 
-1.  Upload the pathinfo/ folder to your craft/plugins/ folder.
-2.  Go to Settings > Plugins from your Craft control panel and enable the PathInfo plugin.
+1. Unzip file and place `pathtools` directory into your `craft/plugins` directory
+2.  -OR- do a `git clone https://github.com/khalwat/pathtools.git` directly into your `craft/plugins` folder.  You can then update it with `git pull`
+3. Install plugin in the Craft Control Panel under Settings > Plugins
 
 ## Usage
 
-All of the functionality offered by PathInfo can be used either as a filter, e.g.:
+All of the functionality offered by PathTools can be used either as a filter, e.g.:
 
 ```
 {{ myAsset.url | basename }}
