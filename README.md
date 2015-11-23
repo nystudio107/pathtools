@@ -79,6 +79,10 @@ For ``myAsset.url`` = ``http://www.coolvids.com/img/ux/search.png`` the output w
 
 ## Changelog
 
+### 1.0.1 -- 2015.11.23
+
+* Added support for Craft 2.5 new plugin features
+
 ### 1.0.0 -- 1/2/2015
 
 * Initial release

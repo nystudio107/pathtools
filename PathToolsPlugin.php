@@ -8,7 +8,27 @@ class PathToolsPlugin extends BasePlugin
          return Craft::t('PathTools');
     }
 
-    public function getVersion()
+    public function getDescription()
+    {
+        return 'This twig plugin for the Craft CMS brings convenient path & url manipulation functions & filters to your Twig templates.';
+    }
+    
+    public function getDocumentationUrl()
+    {
+        return 'https://github.com/khalwat/pathtools/blob/master/README.md';
+    }
+    
+    public function getReleaseFeedUrl()
+    {
+        return 'https://github.com/khalwat/pathtools/blob/master/releases.json';
+    }
+    
+	public function getVersion()
+	{
+	    return '1.0.1';
+	}
+
+    public function getSchemaVersion()
     {
         return '1.0.0';
     }
