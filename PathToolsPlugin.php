@@ -23,10 +23,10 @@ class PathToolsPlugin extends BasePlugin
         return 'https://github.com/khalwat/pathtools/blob/master/releases.json';
     }
     
-	public function getVersion()
-	{
-	    return '1.0.1';
-	}
+    public function getVersion()
+    {
+        return '1.0.1';
+    }
 
     public function getSchemaVersion()
     {
