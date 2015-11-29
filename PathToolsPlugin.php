@@ -35,12 +35,12 @@ class PathToolsPlugin extends BasePlugin
 
     public function getDeveloper()
     {
-        return 'Megalomaniac';
+        return 'nystudio107';
     }
 
     public function getDeveloperUrl()
     {
-        return 'http://megalomaniac.com';
+        return 'http://nystudio107.com';
     }
 
     public function hasCpSection()
