@@ -7,7 +7,7 @@ This twig plugin for the Craft CMS brings convenient path & url manipulation fun
 
 To install PathTools, follow these steps:
 
-1. Unzip file and place `pathtools` directory into your `craft/plugins` directory
+1. Download & unzip the file and place the `pathtools` directory into your `craft/plugins` directory
 2.  -OR- do a `git clone https://github.com/khalwat/pathtools.git` directly into your `craft/plugins` folder.  You can then update it with `git pull`
 3. Install plugin in the Craft Control Panel under Settings > Plugins
 
