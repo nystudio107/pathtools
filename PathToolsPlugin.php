@@ -20,7 +20,7 @@ class PathToolsPlugin extends BasePlugin
     
     public function getReleaseFeedUrl()
     {
-        return 'https://github.com/khalwat/pathtools/blob/master/releases.json';
+        return 'https://raw.githubusercontent.com/khalwat/pathtools/master/releases.json';
     }
     
     public function getVersion()
