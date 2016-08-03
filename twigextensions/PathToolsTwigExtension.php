@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace Craft;
 
 use Twig_Extension;
@@ -21,6 +21,7 @@ class PathToolsTwigExtension extends \Twig_Extension
             'basename' => new \Twig_Filter_Method($this, 'basename_filter'),
             'dirname' => new \Twig_Filter_Method($this, 'dirname_filter'),
             'parse_url' => new \Twig_Filter_Method($this, 'parse_url_filter'),
+            'parse_string' => new \Twig_Filter_Method($this, 'parse_string_filter'),
 
             'swap_extension' => new \Twig_Filter_Method($this, 'swap_extension_filter'),
             'swap_directory' => new \Twig_Filter_Method($this, 'swap_directory_filter'),
@@ -37,6 +38,7 @@ class PathToolsTwigExtension extends \Twig_Extension
             'basename' => new \Twig_Function_Method($this, 'basename_filter'),
             'dirname' => new \Twig_Function_Method($this, 'dirname_filter'),
             'parse_url' => new \Twig_Function_Method($this, 'parse_url_filter'),
+            'parse_string' => new \Twig_Function_Method($this, 'parse_string_filter'),
 
             'swap_extension' => new \Twig_Function_Method($this, 'swap_extension_filter'),
             'swap_directory' => new \Twig_Function_Method($this, 'swap_directory_filter'),
@@ -81,16 +83,24 @@ class PathToolsTwigExtension extends \Twig_Extension
         $output = parse_url($url, $component);
         return $output;
     } /* -- parse_url_filter */
-	
+
+/* -- php parse_str() wrapper -- http://php.net/manual/en/function.parse-str.php */
+
+    public function parse_string_filter($string)
+    {
+        parse_str($string, $output);
+        return $output;
+    } /* -- parse_string_filter */
+
 /* -- Swap the file extension on a passed url or path */
 
     public function swap_extension_filter($path_or_url, $extension)
     {
-    	
+
        	$path = $this->_decompose_url($path_or_url);
        	$path_parts = pathinfo($path['path']);
 	   	$new_path = $path_parts['dirname'] . "/" . $path_parts['filename'] . "." . $extension;
-	   	
+
         $output = $path['prefix'] . $new_path . $path['suffix'];
         return $output;
     } /* -- swap_extension_filter */
@@ -99,11 +109,11 @@ class PathToolsTwigExtension extends \Twig_Extension
 
     public function swap_directory_filter($path_or_url, $directory)
     {
-    	
+
        	$path = $this->_decompose_url($path_or_url);
        	$path_parts = pathinfo($path['path']);
 	   	$new_path = $directory . "/" . $path_parts['basename'];
-	   	
+
         $output = $path['prefix'] . $new_path . $path['suffix'];
         return $output;
     } /* -- swap_directory_filter */
@@ -112,10 +122,10 @@ class PathToolsTwigExtension extends \Twig_Extension
 
     public function append_suffix_filter($path_or_url, $suffix)
     {
-       	$path = $this->_decompose_url($path_or_url);       	
+       	$path = $this->_decompose_url($path_or_url);
        	$path_parts = pathinfo($path['path']);
 	   	$new_path = $path_parts['dirname'] . "/" . $path_parts['filename'] . $suffix . "." . $path_parts['extension'];
-	   	
+
         $output = $path['prefix'] . $new_path . $path['suffix'];
         return $output;
     } /* -- append_suffix_filter */
@@ -142,7 +152,7 @@ class PathToolsTwigExtension extends \Twig_Extension
 	    	$result['path'] = $path_or_url;
 	    	$result['suffix'] = "";
     	}
-		
+
 		return $result;
 	} /* -- decompose_url */
 
