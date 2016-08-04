@@ -4,7 +4,7 @@
         "downloadUrl": "https://github.com/khalwat/pathtools/archive/master.zip",
         "date": "2016-08-04T11:00:00-05:00",
         "notes": [
-            "[Added] Added the parse_url() function",
+            "[Added] Added the parse_str() function",
             "[Improved] Updated the README.md"
         ]
     },

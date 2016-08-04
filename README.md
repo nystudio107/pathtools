@@ -34,8 +34,8 @@ Wrapper for the php basename() function -- <http://php.net/manual/en/function.ba
 Wrapper for the php dirname() function -- <http://php.net/manual/en/function.dirname.php>
 ### parse_url
 Wrapper for the php parse_url() function -- <http://php.net/manual/en/function.parse-url.php>
-### parse_url
-Wrapper for the php parse_url() function -- <http://php.net/manual/en/function.parse-url.php>
+### parse_str
+Wrapper for the php parse_str() function -- <http://php.net/manual/en/function.parse-str.php>
 ## Utility Functions
 ### swap_extension
 Can be passed either a path or a url, and it will return the path or url with the filename extension changed, e.g.:
@@ -84,7 +84,7 @@ For ``myAsset.url`` = ``http://www.coolvids.com/img/ux/search.png`` the output w
 
 ### 1.0.2 -- 2016.08.04
 
-* [Added] Added the parse_url() function
+* [Added] Added the parse_str() function
 * [Improved] Updated the README.md
 
 ### 1.0.1 -- 2015.11.23
